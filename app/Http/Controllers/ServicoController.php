@@ -90,7 +90,7 @@ public function update(UpdateFormRequest $request){
     }
 
     if(isset($request->Descricao)){
-        $servicos->Descricao = $request->Descrico;
+        $servicos->Descricao = $request->Descricao;
     }
 
     if(isset($request->Duracao_Do_Servico)){
