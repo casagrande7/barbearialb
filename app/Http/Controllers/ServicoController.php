@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ServicoFormRequest;
+use App\Http\Requests\UpdateFormRequest;
 use App\Models\Servico;
 use Illuminate\Http\Request;
 
@@ -71,7 +72,7 @@ public function excluir($id){
     ]);
 }
 
-public function update(Request $request){
+public function update(UpdateFormRequest $request){
     $servicos = Servico::find($request->id);
 
     if(!isset($servicos)){
