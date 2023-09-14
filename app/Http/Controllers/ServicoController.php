@@ -11,7 +11,7 @@ class ServicoController extends Controller
     public function store(ServicoFormRequest $request){
         $servicos = Servico::create([
             'Nome' => $request -> Nome,
-            'Preco' => $request -> Preco,
+            'Preco' => str_replace(',', '.',$request -> Preco),
             'Descricao' => $request -> Descricao,
             'Duracao' => $request -> Duracao
         ]);
