@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('servicos', function (Blueprint $table) {
             $table->id();
+            $table->string('Nome', 80)->nullable(false);
+            $table->string('Descricao', 200)->nullable(false);
+            $table->integer('Duracao')->nullable(false);
+            $table->decimal('Preco')->nullable(false);
             $table->timestamps();
+            
+
         });
     }
 
