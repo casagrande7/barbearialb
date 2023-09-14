@@ -24,7 +24,7 @@ class UpdateFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Nome' => 'max:80|min:5|unique:servicos,Nome',
+            'Nome' => 'max:80|min:5',
             'Preco' => 'decimal:2',
             'Descricao' => 'max:200|min:10',
             'Duracao' => 'numeric'
