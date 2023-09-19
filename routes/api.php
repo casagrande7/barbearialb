@@ -31,6 +31,25 @@ Route::delete('delete/{id}',[ServicoController::class, 'excluir']);
 
 
 //* Clientes
-Route::post('store',[ClienteController::class, 'store']);
+Route::post('registro',[ClienteController::class, 'store']);
 
-Route::get('find/{id}', [ClienteController::class, 'pesquisaPorId']);
+Route::get('pesquisa/{id}', [ClienteController::class, 'pesquisaPorId']);
+
+Route::post('buscaNome', [ClienteController::class, 'pesquisarPorNome']);
+
+Route::post('cpf', [ClienteController::class, 'pesquisarPorCpf']);
+
+Route::post('email', [ClienteController::class, 'pesquisarPorEmail']);
+
+Route::post('celular', [ClienteController::class, 'pesquisarPorCelular']);
+
+Route::get('todos', [ClienteController::class, 'retornarTodosClientes']);
+
+Route::put('atualizarCliente',[ClienteController::class, 'atualizarCliente']);
+
+Route::delete('excluir/{id}',[ClienteController::class, 'excluirCliente']);
+
+
+
+
+
