@@ -37,6 +37,7 @@ Descrição: Cuidamos dos cabelos dos pequenos com a mesma atenção e carinho. 
 Duração: 30 minutos
 Preço: R$ 25,00
 Descrição: Para manter sua barba saudável e brilhante, oferecemos tratamentos especiais que incluem lavagem, condicionamento e hidratação, deixando-a macia e com uma aparência impecável.
+
 Na Barbearia LB, nossa equipe está comprometida em superar suas expectativas em cada visita. Garantimos que você sairá com um visual renovado e confiante. Entre em contato conosco para agendar um horário ou visite-nos para experimentar os nossos serviços de alta qualidade. Estamos ansiosos para atendê-lo e ajudá-lo a alcançar o visual que você deseja.
 
 
