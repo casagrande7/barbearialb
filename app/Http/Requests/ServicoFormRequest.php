@@ -24,10 +24,10 @@ class ServicoFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Nome' => 'required|max:80|min:5|unique:servicos,Nome',
-            'Preco' => 'required|decimal:2',
-            'Descricao' => 'required|max:200|min:10',
-            'Duracao' => 'required|numeric'
+            'nome' => 'required|max:80|min:5|unique:servicos,Nome',
+            'preco' => 'required|decimal:2',
+            'descricao' => 'required|max:200|min:10',
+            'duracao' => 'required|numeric'
         ];
     }
     public function failedValidation(Validator $validator){
@@ -40,16 +40,16 @@ class ServicoFormRequest extends FormRequest
     
     public function messages(){
         return [
-            'Nome.required' => 'Nome é obrigatório',
-            'Nome.max' => 'O campo Nome deve conter no máximo 80 caracteres',
-            'Nome.min' => 'O campo Nome deve conter no mínimo 5 caracteres',
-            'Preco.required' => 'Preço é obrigatório',
-            'Preco.decimal' => 'O campo Preço deve conter apenas valores em decimais',
-            'Descricao.required' => 'Descrição é obrigatório',
-            'Descricao.max' => 'O campo Descrição deve conter no máximo 200 caracteres',
-            'Descricao.min' => 'O campo Descrição deve conter no mínimo 10 caracteres',
-            'Duracao.required' => 'Duração do Serviço é obrigatório',
-            'Duracao.numeric' => 'O campo Duração do Serviço deve conter apenas números'
+            'nome.required' => 'Nome é obrigatório',
+            'nome.max' => 'O campo Nome deve conter no máximo 80 caracteres',
+            'nome.min' => 'O campo Nome deve conter no mínimo 5 caracteres',
+            'preco.required' => 'Preço é obrigatório',
+            'preco.decimal' => 'O campo Preço deve conter apenas valores em decimais',
+            'descricao.required' => 'Descrição é obrigatório',
+            'descricao.max' => 'O campo Descrição deve conter no máximo 200 caracteres',
+            'descricao.min' => 'O campo Descrição deve conter no mínimo 10 caracteres',
+            'duracao.required' => 'Duração do Serviço é obrigatório',
+            'duracao.numeric' => 'O campo Duração do Serviço deve conter apenas números'
         ];
     }
    

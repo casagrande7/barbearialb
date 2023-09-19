@@ -11,10 +11,10 @@ class ServicoController extends Controller
 {
     public function store(ServicoFormRequest $request){
         $servicos = Servico::create([
-            'Nome' => $request -> Nome,
-            'Preco' => str_replace(',', '.',$request -> Preco),
-            'Descricao' => $request -> Descricao,
-            'Duracao' => $request -> Duracao
+            'nome' => $request -> nome,
+            'preco' => str_replace(',', '.',$request -> preco),
+            'descricao' => $request -> descricao,
+            'duracao' => $request -> duracao
         ]);
         return response()->json([
             "sucess" => true,
@@ -38,7 +38,7 @@ class ServicoController extends Controller
     }
 
     public function pesquisaPorNome(Request $request){
-        $servicos = Servico::where('nome', 'like', '%'. $request->Nome .'%')->get();
+        $servicos = Servico::where('nome', 'like', '%'. $request->nome .'%')->get();
 
         if(count($servicos)> 0){
 
@@ -81,20 +81,20 @@ public function update(UpdateFormRequest $request){
             'message' => "Usuário não encontrado"
         ]);
     }
-    if(isset($request->Nome)){
-        $servicos->Nome = $request-> Nome;
+    if(isset($request->nome)){
+        $servicos->nome = $request-> Nome;
     }
 
-    if(isset($request->Preco)){
-        $servicos->Preco = $request -> Preco;
+    if(isset($request->preco)){
+        $servicos->preco = $request -> preco;
     }
 
-    if(isset($request->Descricao)){
-        $servicos->Descricao = $request->Descricao;
+    if(isset($request->descricao)){
+        $servicos->descricao = $request->descricao;
     }
 
-    if(isset($request->Duracao_Do_Servico)){
-        $servicos->Duracao_Do_Servico = $request->Duracao_Do_Servico;
+    if(isset($request->duracao)){
+        $servicos->duracao = $request->duracao;
     }
 
     $servicos->update();

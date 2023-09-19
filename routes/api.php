@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//* Serviços
 Route::post('store', [ServicoController::class, 'store']);
 
 Route::get('find/{id}', [ServicoController::class, 'pesquisarPorId']);
@@ -28,6 +29,8 @@ Route::put('atualizar',[ServicoController::class, 'update']);
 
 Route::delete('delete/{id}',[ServicoController::class, 'excluir']);
 
+
+//* Clientes
 Route::post('store',[ClienteController::class, 'store']);
 
 Route::get('find/{id}', [ClienteController::class, 'pesquisaPorId']);

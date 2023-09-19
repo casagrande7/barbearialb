@@ -9,9 +9,9 @@ class Servico extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'Nome',
-        'Preco',
-        'Descricao',
-        'Duracao',
+        'nome',
+        'preco',
+        'descricao',
+        'duracao',
     ];
 }

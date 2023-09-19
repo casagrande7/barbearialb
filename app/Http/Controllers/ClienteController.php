@@ -10,20 +10,20 @@ class ClienteController extends Controller
 {
     public function store(ClienteFormRequest $request){
         $clientes= Cliente::create([
-            'Nome' => $request-> Nome,
-            'Celular' => $request-> Celular,
-            'Email' => $request-> Email,
-            'CPF' => $request-> CPF,
-            'DataNascimento' => $request-> DataNascimento,
-            'Cidade' => $request-> Cidade,
-            'Estado' => $request -> Estado,
-            'País' => $request -> País,
-            'Rua' => $request-> Rua,
-            'Número' => $request-> Número,
-            'Bairro' => $request -> Bairro,
-            'CEP'=> $request -> CEP,
-            'Complemento'=> $request -> Complemento,
-            'Senha' => $request -> Senha
+            'nome' => $request-> nome,
+            'celular' => $request-> celular,
+            'email' => $request-> email,
+            'cpf' => $request-> cpf,
+            'dataNascimento' => $request-> dataNascimento,
+            'cidade' => $request-> cidade,
+            'estado' => $request -> estado,
+            'país' => $request -> país,
+            'rua' => $request-> rua,
+            'número' => $request-> número,
+            'bairro' => $request -> bairro,
+            'cep'=> $request -> cep,
+            'complemento'=> $request -> complemento,
+            'senha' => $request -> senha
 
         ]);
         return response()->json([
@@ -47,5 +47,5 @@ class ClienteController extends Controller
         ]);
     }
 
-    
+
 }

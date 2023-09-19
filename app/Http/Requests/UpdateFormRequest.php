@@ -24,10 +24,10 @@ class UpdateFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Nome' => 'max:80|min:5',
-            'Preco' => 'decimal:2',
-            'Descricao' => 'max:200|min:10',
-            'Duracao' => 'numeric'
+            'nome' => 'max:80|min:5',
+            'preco' => 'decimal:2',
+            'descricao' => 'max:200|min:10',
+            'duracao' => 'numeric'
         ];
     }
 
@@ -41,12 +41,12 @@ class UpdateFormRequest extends FormRequest
 
     public function messages(){
         return [
-            'Nome.max' => 'O campo Nome deve conter no máximo 80 caracteres',
-            'Nome.min' => 'O campo Nome deve conter no mínimo 5 caracteres',
-            'Preco.decimal' => 'O campo Preço deve conter apenas valores em decimais',
-            'Descricao.max' => 'O campo Descrição deve conter no máximo 200 caracteres',
-            'Descricao.min' => 'O campo Descrição deve conter no mínimo 10 caracteres',
-            'Duracao.numeric' => 'O campo Duração do Serviço deve conter apenas números'
+            'nome.max' => 'O campo Nome deve conter no máximo 80 caracteres',
+            'nome.min' => 'O campo Nome deve conter no mínimo 5 caracteres',
+            'preco.decimal' => 'O campo Preço deve conter apenas valores em decimais',
+            'descricao.max' => 'O campo Descrição deve conter no máximo 200 caracteres',
+            'descricao.min' => 'O campo Descrição deve conter no mínimo 10 caracteres',
+            'duracao.numeric' => 'O campo Duração do Serviço deve conter apenas números'
         ];
     }
 }
