@@ -20,9 +20,9 @@ return new class extends Migration
             $table->date('dataNascimento')->nullabe(false);
             $table->string('cidade', 120)->nullabe(false);
             $table->string('estado', 2)->nullabe(false);
-            $table->string('país', 80)->nullabe(false);
+            $table->string('pais', 80)->nullabe(false);
             $table->string('rua', 120)->nullabe(false);
-            $table->string('número', 10)->nullabe(false);
+            $table->string('numero', 10)->nullabe(false);
             $table->string('bairro', 100)->nullabe(false);
             $table->string('cep', 8)->nullabe(false);
             $table->string('complemento', 150)->nullable(true);

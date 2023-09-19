@@ -18,9 +18,9 @@ class ClienteController extends Controller
             'dataNascimento' => $request-> dataNascimento,
             'cidade' => $request-> cidade,
             'estado' => $request -> estado,
-            'país' => $request -> país,
+            'pais' => $request -> pais,
             'rua' => $request-> rua,
-            'número' => $request-> número,
+            'numero' => $request-> numero,
             'bairro' => $request -> bairro,
             'cep'=> $request -> cep,
             'complemento'=> $request -> complemento,
@@ -131,7 +131,7 @@ public function retornarTodosClientes(){
     ]);       
 }
 
-public function atualizarCliente(UpdateClienteFormRequest $request){
+public function atualizarClientes(UpdateClienteFormRequest $request){
     $clientes = Cliente::find($request->id);
 
     if(!isset($clientes)){
@@ -168,12 +168,12 @@ public function atualizarCliente(UpdateClienteFormRequest $request){
         $clientes->rua = $request->rua;
     }
 
-    if(isset($request->número)){
-        $clientes->número = $request->número;
+    if(isset($request->numero)){
+        $clientes->numero = $request->numero;
     }
 
-    if(isset($request->país)){
-        $clientes->país = $request->país;
+    if(isset($request->pais)){
+        $clientes->pais = $request->pais;
     }
 
     if(isset($request->complemento)){

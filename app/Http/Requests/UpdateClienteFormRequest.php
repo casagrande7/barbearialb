@@ -34,7 +34,6 @@ class UpdateClienteFormRequest extends FormRequest
             'numero' => 'max:10',
             'bairro' => 'max:100',
             'cep' => 'max:8|min:8',
-            'senha' => '',
             'complemento' => 'max:150'
         
         ];
@@ -56,9 +55,9 @@ class UpdateClienteFormRequest extends FormRequest
     'cidade.max' => 'O campo Cidade deve conter no máximo 120 caracteres',
     'estado.max' => 'O campo Estado deve conter no máximo 2 caracteres',
     'estado.min' => 'O campo Estado deve conter no mínimo 2 caracteres',
-    'país.max' => 'O campo País deve conter no máximo 80 caracteres',
+    'pais.max' => 'O campo País deve conter no máximo 80 caracteres',
     'rua.max' => 'O campo Rua deve conter no máximo 120 caracteres',
-    'número.max' => 'O campo Número deve conter no máximo 10 caracteres',
+    'numero.max' => 'O campo Número deve conter no máximo 10 caracteres',
     'bairro.max' => 'O campo Bairro deve conter no máximo 100 caracteres',
     'cep.max' => 'O campo CEP deve conter no máximo 8 caracteres',
     'cep.min' => 'O campo CEP deve conter no mínimo 8 caracteres',

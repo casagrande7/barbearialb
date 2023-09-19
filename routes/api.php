@@ -45,7 +45,7 @@ Route::post('celular', [ClienteController::class, 'pesquisarPorCelular']);
 
 Route::get('todos', [ClienteController::class, 'retornarTodosClientes']);
 
-Route::put('atualizarCliente',[ClienteController::class, 'atualizarCliente']);
+Route::put('cliente/atualizar',[ClienteController::class, 'atualizarClientes']);
 
 Route::delete('excluir/{id}',[ClienteController::class, 'excluirCliente']);
 
