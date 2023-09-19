@@ -29,3 +29,5 @@ Route::put('atualizar',[ServicoController::class, 'update']);
 Route::delete('delete/{id}',[ServicoController::class, 'excluir']);
 
 Route::post('store',[ClienteController::class, 'store']);
+
+Route::get('find/{id}', [ClienteController::class, 'pesquisaPorId']);

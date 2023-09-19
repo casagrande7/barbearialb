@@ -32,4 +32,20 @@ class ClienteController extends Controller
             "data" => $clientes
         ], 200);
     }
+
+    public function pesquisaPorId($id){
+        $clientes = Cliente::find($id);
+        if($clientes == null){
+            return response()-> json([
+                'status' => false,
+                'data' => "Cliente não encontrado"
+            ]);
+        }
+        return response()-> json([
+            'status' => true,
+            'data' => $clientes
+        ]);
+    }
+
+    
 }
