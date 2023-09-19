@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ServicoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,3 +27,5 @@ Route::get('all', [ServicoController::class, 'retornarTodos']);
 Route::put('atualizar',[ServicoController::class, 'update']);
 
 Route::delete('delete/{id}',[ServicoController::class, 'excluir']);
+
+Route::post('store',[ClienteController::class, 'store']);
