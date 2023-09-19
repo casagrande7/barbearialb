@@ -2,7 +2,7 @@
 =======
 <div align= "center">
 
-![Captura de tela 2023-09-19 080657](https://github.com/casagrande7/Drogazin-api/assets/140071695/8c0d001d-b821-4b37-a442-84e3ddfbde38)
+![Logo](https://github.com/casagrande7/Drogazin-api/assets/140071695/4317f9d1-3085-49ac-90fd-b2062504cc7b)
 </div>
 
 * Página de [Cadastro de Serviço](servicos.md)
@@ -28,6 +28,44 @@ A transparência é fundamental para nós na Barbearia LB. É por isso que ofere
 
 Na Barbearia LB, nossa missão é ajudá-lo a parecer e sentir-se no seu melhor. Não somos apenas uma barbearia; somos uma experiência de estilo e bem-estar. Convidamos você a explorar todas as nossas páginas e serviços para descobrir como podemos atender às suas necessidades de estilo e cuidados pessoais. Esperamos recebê-lo em breve na Barbearia LB, onde a excelência é o nosso compromisso diário.
 
+## Como utilizar este repositório
+
+1. Clone este repositório para o seu ambiente de desenvolvimento local utilizando o comando:
+```
+ git clone https://github.com/casagrande7/Drogazin-api.git
+```
+2. Acesse o diretório do projeto:
+```
+cd Drogazin-api
+```
+3. Inicializando o Repositorio
+```
+composer update
+```
+4. Copiando o env. do exemplo
+```
+copy .env.example .env
+```
+
+5. Acessar o Visual Studio Code
+```
+code .
+```
+
+
+##Insomnia
+
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE), o que significa que você pode utilizá-lo livremente para fins educacionais, comerciais ou pessoais.
+
+## Contato
+Em caso de dúvidas, sugestões ou problemas, sinta-se à vontade para entrar em contato através do email: joaofootz10@gmail.com
+
+**Aviso**: Certifique-se de substituir "casagrande7" no link de clonagem e "joaofootz10@gmail.com" na seção de contato pelos valores correspondentes do seu próprio usuário do GitHub e endereço de e-mail.
+
+Este é apenas um modelo básico de README.md, você pode adaptar e melhorar conforme suas necessidades específicas de projeto. Certifique-se de incluir informações importantes sobre como configurar, executar e testar os exercícios, bem como qualquer outra documentação relevante para tornar o repositório mais amigável e útil para outros desenvolvedores.
 
 
 
