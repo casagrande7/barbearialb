@@ -22,19 +22,20 @@ Bem-vindo à sua página de cliente na Barbearia LB! Esta é a sua central de in
 
 Aqui estão os detalhes da sua conta:
 
-Nome: [Seu Nome Completo]
-CPF: [Seu Número de CPF]
-Senha da Conta: [Sua Senha Segura]
-E-mail: [Seu Endereço de E-mail]
-Data de Nascimento: [Sua Data de Nascimento]
-Celular: [Seu Número de Celular]
-CEP: [Seu CEP]
-Bairro: [Nome do Seu Bairro]
-Rua: [Nome da Sua Rua]
-Estado: [Nome do Seu Estado]
-País: [Nome do Seu País]
-Número da Casa: [Número da Sua Casa]
-Complemento: [Complemento, se houver]
+* Nome: [Seu Nome Completo]
+* CPF: [Seu Número de CPF]
+* Senha da Conta: [Sua Senha Segura]
+* E-mail: [Seu Endereço de E-mail]
+* Data de Nascimento: [Sua Data de Nascimento]
+* Celular: [Seu Número de Celular]
+* CEP: [Seu CEP]
+* Bairro: [Nome do Seu Bairro]
+* Rua: [Nome da Sua Rua]
+* Estado: [Nome do Seu Estado]
+* País: [Nome do Seu País]
+* Número da Casa: [Número da Sua Casa]
+* Complemento: [Complemento, se houver]
+
 Por favor, mantenha essas informações atualizadas para que possamos entrar em contato com você, agendar compromissos, enviar promoções e garantir que você aproveite ao máximo nossos serviços de barbearia.
 
 Lembre-se de que a segurança da sua conta é fundamental. Nunca compartilhe sua senha com ninguém e tenha cuidado ao fornecer informações pessoais online.
