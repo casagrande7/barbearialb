@@ -17,11 +17,12 @@ class Profissional extends Model
         'cidade',
         'estado',
         'pais',
-        'endereco',
+        'rua',
         'numero',
         'bairro',
         'cep',
         'complemento',
-        'salario'
+        'salario',
+        'senha'
     ];
 }

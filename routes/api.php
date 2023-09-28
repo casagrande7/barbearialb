@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ProfissionalController;
 use App\Http\Controllers\ServicoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +49,24 @@ Route::get('todos', [ClienteController::class, 'retornarTodosClientes']);
 Route::put('cliente/atualizar',[ClienteController::class, 'atualizarClientes']);
 
 Route::delete('excluir/{id}',[ClienteController::class, 'excluirCliente']);
+
+// Profissionals
+Route::post('cadastro', [ProfissionalController::class, 'store']);
+
+Route::get('pesquisar/{id}', [ProfissionalController::class, 'pesquisandoPorId']);
+
+Route::post('procurarNome' , [ProfissionalController::class, 'pesquisandoPorNome']);
+
+Route::post('pesquisarCpf', [ProfissionalController::class, 'pesquisandoPorCpf']);
+
+Route::post('pesquisarEmail', [ProfissionalController::class, 'pesquisandoPorEmail']);
+
+Route::get('pesquisarTodos', [ProfissionalController::class, 'retornandoTodosProfissionais']);
+
+Route::put('profissional/atualizar',[ProfissionalController::class, 'atualizarProfissional']);
+
+Route::delete('deletar/{id}', [ProfissionalController::class, 'deletarProfissional']);
+
 
 
 
