@@ -113,7 +113,4 @@ public function retornarTodos(){
     ]);       
 }
 
-
-
-
 }
