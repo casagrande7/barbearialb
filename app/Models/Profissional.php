@@ -23,6 +23,5 @@ class Profissional extends Model
         'cep',
         'complemento',
         'salario'
-
     ];
 }
