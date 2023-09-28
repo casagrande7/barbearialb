@@ -6,6 +6,7 @@ use App\Http\Requests\ProfissionalFormRequest;
 use App\Http\Requests\UpdateProfissionalFormRequest;
 use App\Models\Profissional;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ProfissionalController extends Controller
 {
@@ -25,7 +26,7 @@ class ProfissionalController extends Controller
             'cep' => $request -> cep,
             'complemento' => $request -> complemento,
             'salario' => $request -> salario,
-            'senha' => $request ->  senha
+            'senha' => Hash::make($request->senha)
 
         ]);
         return response()->json([
