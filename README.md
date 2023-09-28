@@ -6,6 +6,9 @@
 </div>
 
 * Página de [Cadastro de Serviço](servicos.md)
+* Página de [Cadastro de Clientes](cliente.md)
+* Página de [Agendamento](agendamento.md)
+* Página de [Profissioanis](profissionais.md)
 
 # Sobre o Projeto:
 
