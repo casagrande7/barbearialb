@@ -63,7 +63,7 @@ Route::post('pesquisarEmail', [ProfissionalController::class, 'pesquisandoPorEma
 
 Route::get('pesquisarTodos', [ProfissionalController::class, 'retornandoTodosProfissionais']);
 
-Route::put('profissional/atualizar',[ProfissionalController::class, 'atualizarProfissional']);
+Route::put('update',[ProfissionalController::class, 'atualizarProfissional']);
 
 Route::delete('deletar/{id}', [ProfissionalController::class, 'deletarProfissional']);
 
