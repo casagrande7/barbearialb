@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class UpdateClienteFormRequest extends FormRequest
 {
@@ -24,9 +26,9 @@ class UpdateClienteFormRequest extends FormRequest
         return [
             'nome' => 'max:120|min:5',
             'celular' => 'max:11|min:10',
-            'email' => 'max:120|unique:clientes,email', 
-            'cpf' => 'max:11|min:11|unique:clientes,cpf',
-            'dataNascimento' => 'date',
+            'email' => 'max:120|unique:clientes,email|email:rfc,' .$this-> id,
+            'cpf' => 'max:11|min:11|unique:clientes,cpf,' . $this -> id,
+            'dataNascimento' => '',
             'cidade' => 'max:120', 
             'estado' => 'max:2|min:2' ,
             'pais' => 'max:80',
@@ -34,9 +36,18 @@ class UpdateClienteFormRequest extends FormRequest
             'numero' => 'max:10',
             'bairro' => 'max:100',
             'cep' => 'max:8|min:8',
-            'complemento' => 'max:150'
+            'complemento' => 'max:150',
+            'senha' => ''
         
         ];
+    }
+
+    public function failedValidation(Validator $validator){
+        throw new HttpResponseException(response()->json([
+            'success' => false,
+            'error' => $validator->errors()
+
+        ]));
     }
 
     public function messages(){
@@ -47,7 +58,6 @@ class UpdateClienteFormRequest extends FormRequest
     'celular.max' => 'O campo Celular deve conter no máximo 11 caracteres',
     'celular.min' => 'O campo Celular deve conter no mínimo 10 caracteres',
     'email.max' => 'O campo Email deve conter no máximo 120 caracteres',
-
     'cpf.max' => 'O campo CPF deve conter no máximo 11 caracteres',
     'cpf.min' => 'O campo CPF deve conter no mínimo 11 caracteres',
     'dataNascimento.date' => 'O campo DataNascimento deve conter só datas',
