@@ -8,19 +8,20 @@ use Illuminate\Http\Request;
 
 class AgendaController extends Controller
 {
-    public function agenda(AgendaFormRequest $request){
-        $agenda= Agenda::create([
-        'profissional_id' => $request -> profissional,
-        'cliente_id' => $request -> cliente,
-        'servico_id' => $request -> servico,
-        'data_hora' => $request -> dataHora,
-        'tipo_pagamento' => $request -> tipoPagamento,
-        'valor' => $request -> valor
+    public function agenda(AgendaFormRequest $request)
+    {
+        $agenda = Agenda::create([
+            'profissional_id' => $request->profissional,
+            'cliente_id' => $request->cliente,
+            'servico_id' => $request->servico,
+            'data_hora' => $request->dataHora,
+            'tipo_pagamento' => $request->tipoPagamento,
+            'valor' => $request->valor
 
         ]);
         return response()->json([
             "sucess" => true,
-            "message" => "Cliente cadastrado com sucesso",
+            "message" => "Agendamento realizado com sucesso",
             "data" => $agenda
         ], 200);
     }
