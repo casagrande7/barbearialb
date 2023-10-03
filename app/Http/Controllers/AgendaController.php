@@ -12,10 +12,10 @@ class AgendaController extends Controller
     {
         $agenda = Agenda::create([
             'profissional_id' => $request->profissional,
-            'cliente_id' => $request->cliente,
-            'servico_id' => $request->servico,
-            'data_hora' => $request->dataHora,
-            'tipo_pagamento' => $request->tipoPagamento,
+            'cliente_id' => $request -> cliente_id,
+            'servico_id' => $request -> servico_id,
+            'data_hora' => $request->data_hora,
+            'tipo_pagamento' => $request->tipo_pagamento,
             'valor' => $request->valor
 
         ]);

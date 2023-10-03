@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProfissionalController;
 use App\Http\Controllers\ServicoController;
@@ -66,6 +67,9 @@ Route::get('pesquisarTodos', [ProfissionalController::class, 'retornandoTodosPro
 Route::put('update',[ProfissionalController::class, 'atualizarProfissional']);
 
 Route::delete('deletar/{id}', [ProfissionalController::class, 'deletarProfissional']);
+
+//* Agendamento
+Route::post('registroAgenda', [AgendaController::class, 'agenda']);
 
 
 

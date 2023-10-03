@@ -47,10 +47,10 @@ class AgendaFormRequest extends FormRequest
             'valor.decimal' => 'O campo Valor deve conter apenas valores em reais',
             'data_hora.required' => 'O campo Data e Hora é obrigatório',
             'data_hora.date' => 'O campo Data e Hora deve conter apenas datas',
-            'profissional_id' => 'O ID tem que ser um número inteiro',
+            'profissional_id.integer' => 'O ID tem que ser um número inteiro',
             'profissional_id.required' => 'O campo Profissional_id é obrigatório',
-            'cliente_id' => 'O ID tem que ser um número inteiro',
-            'servico_id' => 'O ID tem que ser um número'
+            'cliente_id.integer' => 'O ID tem que ser um número inteiro',
+            'servico_id.integer' => 'O ID tem que ser um número'
         ];
     }
 }
