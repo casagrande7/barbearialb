@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
+            $table->string('profissional_id')->nullable(false);
+            $table->string('cliente_id')->nullabe(true);
+            $table->string('servico_id')->nullabe(true);
+            $table->date('data_hora')->nullabe(false);
+            $table->string('tipo_pagamento', 20)->nullabe(true);
+            $table->string('valor')->nullabe(true);
             $table->timestamps();
         });
     }

@@ -26,7 +26,7 @@ class UpdateAgendaFormRequest extends FormRequest
             'cliente_id' => 'integer',
             'servico_id' => 'integer',
             'data_hora' =>  'date|required_if:data_hora,null',
-            'tipo_pagamento' => 'required|max:20|min: 3',
+            'tipo_pagamento' => 'max:20|min: 3',
             'valor' => 'decimal:2'
         ];
     }
