@@ -51,6 +51,8 @@ Route::put('cliente/atualizar',[ClienteController::class, 'atualizarClientes']);
 
 Route::delete('excluir/{id}',[ClienteController::class, 'excluirCliente']);
 
+Route::put('esqueciSenha', [ClienteController::class, 'esqueciSenha']);
+
 // Profissionals
 Route::post('cadastro', [ProfissionalController::class, 'store']);
 

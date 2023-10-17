@@ -25,4 +25,7 @@ class AgendaController extends Controller
             "data" => $agenda
         ], 200);
     }
+
+
+  
 }
