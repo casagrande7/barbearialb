@@ -35,11 +35,11 @@ Na Barbearia LB, nossa missão é ajudá-lo a parecer e sentir-se no seu melhor.
 
 1. Clone este repositório para o seu ambiente de desenvolvimento local utilizando o comando:
 ```
- git clone https://github.com/casagrande7/Drogazin-api.git
+ git clone https://github.com/casagrande7/barbearialb.git
 ```
 2. Acesse o diretório do projeto:
 ```
-cd Drogazin-api
+cd barbearialb
 ```
 3. Inicializando o Repositorio
 ```

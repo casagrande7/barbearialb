@@ -82,7 +82,7 @@ public function update(UpdateFormRequest $request){
         ]);
     }
     if(isset($request->nome)){
-        $servicos->nome = $request-> Nome;
+        $servicos->nome = $request-> nome;
     }
 
     if(isset($request->preco)){
