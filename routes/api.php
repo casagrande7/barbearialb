@@ -73,6 +73,12 @@ Route::delete('deletar/{id}', [ProfissionalController::class, 'deletarProfission
 //* Agendamento
 Route::post('registroAgenda', [AgendaController::class, 'agenda']);
 
+Route::put('updateAgenda', [AgendaController::class, 'atualizarAgenda']);
+
+Route::delete('deletarAgenda/{id}', [AgendaController::class, 'deletarAgenda']);
+
+Route::get('todosAgenda', [AgendaController::class, 'retornarTodosAgenda']);
+
 
 
 

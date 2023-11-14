@@ -48,7 +48,7 @@ class AgendaFormRequest extends FormRequest
             'data_hora.required' => 'O campo Data e Hora é obrigatório',
             'data_hora.date' => 'O campo Data e Hora deve conter apenas datas',
             'profissional_id.integer' => 'O ID tem que ser um número inteiro',
-            'profissional_id.required' => 'O campo Profissional_id é obrigatório',
+            'profissional_id.required' => 'O campo Profissional é obrigatório',
             'cliente_id.integer' => 'O ID tem que ser um número inteiro',
             'servico_id.integer' => 'O ID tem que ser um número'
         ];
