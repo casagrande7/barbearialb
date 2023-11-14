@@ -46,7 +46,7 @@ class AgendaFormRequest extends FormRequest
             'tipo_pagamento.min' => 'O campo Tipo de Pagamento deve conter no mínimo 3 caracteres',
             'valor.decimal' => 'O campo Valor deve conter apenas valores em reais',
             'data_hora.required' => 'O campo Data e Hora é obrigatório',
-            'data_hora.date' => 'O campo Data e Hora deve conter apenas datas',
+            'data_hora.date' => 'O campo Data e Hora deve conter apenas datas e horários',
             'profissional_id.integer' => 'O ID tem que ser um número inteiro',
             'profissional_id.required' => 'O campo Profissional é obrigatório',
             'cliente_id.integer' => 'O ID tem que ser um número inteiro',
