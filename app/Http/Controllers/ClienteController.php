@@ -29,7 +29,7 @@ class ClienteController extends Controller
 
         ]);
         return response()->json([
-            "sucess" => true,
+            "status" => true,
             "message" => "Cliente cadastrado com sucesso",
             "data" => $clientes
         ], 200);

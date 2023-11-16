@@ -81,6 +81,8 @@ Route::delete('deletarAgenda/{id}', [AgendaController::class, 'deletarAgenda']);
 
 Route::get('todosAgenda', [AgendaController::class, 'retornarTodosAgenda']);
 
+Route::post('pesquisaHorarios', [AgendaController::class, 'pesquisaPorData']);
+
 
 
 

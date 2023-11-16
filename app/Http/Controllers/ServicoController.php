@@ -17,7 +17,7 @@ class ServicoController extends Controller
             'duracao' => $request -> duracao
         ]);
         return response()->json([
-            "sucess" => true,
+            "status" => true,
             "message" => "Serviço cadastrado com sucesso",
             "data" => $servicos
         ], 200);

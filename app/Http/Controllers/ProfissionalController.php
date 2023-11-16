@@ -30,7 +30,7 @@ class ProfissionalController extends Controller
 
         ]);
         return response()->json([
-            "sucess" => true,
+            "status" => true,
             "message" => "Profissional cadastrado com sucesso",
             "data" => $profissional
         ], 200);
