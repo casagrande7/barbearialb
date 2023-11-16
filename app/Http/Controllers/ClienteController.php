@@ -222,7 +222,7 @@ public function excluirCliente($id){
     ]);
 }
 
-public function esqueciSenha(Request $request)
+public function recuperarSenha(Request $request)
     {
         $clientes = Cliente::where('cpf', $request->cpf)->first();
 

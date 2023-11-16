@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('profissional_id')->nullable(false);
-            $table->bigInteger('cliente_id')->nullabe(true);
-            $table->bigInteger('servico_id')->nullabe(true);
-            $table->dateTime('data_hora')->nullabe(false);
-            $table->string('tipo_pagamento', 20)->nullabe(true);
-            $table->string('valor')->nullabe(true);
+            $table->bigInteger('profissional_id')->unsigned()->nullable(false);
+            $table->bigInteger('cliente_id')->nullable();
+            $table->bigInteger('servico_id')->nullable();
+            $table->dateTime('data_hora')->nullable(false);
+            $table->string('tipo_pagamento', 20)->nullable();
+            $table->string('valor', 2)->nullable();
             $table->timestamps();
+            $table->foreign('profissional_id')->references('id')->on('profissionals');
         });
     }
 

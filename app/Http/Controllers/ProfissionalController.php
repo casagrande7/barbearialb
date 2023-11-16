@@ -224,4 +224,23 @@ public function deletarProfissional($id){
     ]);
 }
 
+public function redefinirSenha(Request $request)
+    {
+        $profissional = Profissional::where('cpf', $request->cpf)->first();
+
+        if (isset($profissional)) {
+            $profissional->senha = Hash::make($profissional->cpf);
+            $profissional->update();
+            return response()->json([
+                'status' => true,
+                'message' => 'Senha redefinida.'
+            ]);
+        }
+
+        return response()->json([
+            'status' => false,
+            'message' => 'Não foi possivel alterar a senha'
+        ]);
+    }
+
 }
