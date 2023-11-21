@@ -85,6 +85,8 @@ Route::post('pesquisaHorarios', [AgendaController::class, 'pesquisaPorData']);
 
 Route::get('pesquisaIdAgenda/{id}', [AgendaController::class, 'pesquisarPorIdAgenda']);
 
+Route::post('criarAgendaProfissional', [AgendaController::class, 'criarHorarioProfissional']);
+
 
 
 

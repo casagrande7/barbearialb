@@ -120,18 +120,43 @@ class AgendaController extends Controller
         ]);
     }
 
-    public function pesquisarPorIdAgenda($id){
+    public function pesquisarPorIdAgenda($id)
+    {
         $agenda = Agenda::find($id);
-        if($agenda == null){
-            return response()-> json([
+        if ($agenda == null) {
+            return response()->json([
                 "status" => false,
                 "message" => "Agendamento não encontrado"
             ]);
         }
-        return response()-> json([
+        return response()->json([
             "status" => true,
             "data" => $agenda
         ]);
+    }
 
+    public function criarHorarioProfissional(AgendaFormRequest $request)
+    {
+
+        $agendaProfissional = Agenda::where('data_hora', '=', $request->data_hora)->where('profissional_id', '=', $request->profissional_id)->get();
+
+        if (count($agendaProfissional) > 0) {
+            return response()->json([
+                "success" => false,
+                "message" => "Horario ja cadastrado",
+                "data" => $agendaProfissional
+            ], 200);    
+        } else {
+
+            $agendaProfissional = Agenda::create([
+                'profissional_id' => $request->profissional_id,
+                'data_hora' => $request->data_hora
+            ]);
+            return response()->json([
+                "status" => true,
+                "message" => "Agendado com sucesso",
+                "data" => $agendaProfissional
+            ], 200);
+        }
     }
 }
