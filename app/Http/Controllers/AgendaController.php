@@ -119,4 +119,19 @@ class AgendaController extends Controller
             'data' => $agenda
         ]);
     }
+
+    public function pesquisarPorIdAgenda($id){
+        $agenda = Agenda::find($id);
+        if($agenda == null){
+            return response()-> json([
+                "status" => false,
+                "message" => "Agendamento não encontrado"
+            ]);
+        }
+        return response()-> json([
+            "status" => true,
+            "data" => $agenda
+        ]);
+
+    }
 }
