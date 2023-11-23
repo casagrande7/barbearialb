@@ -224,21 +224,23 @@ public function excluirCliente($id){
 
 public function recuperarSenha(Request $request)
     {
-        $clientes = Cliente::where('cpf', $request->cpf)->first();
+        $clientes = Cliente::where('email', '=',$request->email)->first();
 
-        if (isset($clientes)) {
-            $clientes->senha = Hash::make($clientes->cpf);
-            $clientes->update();
+        if (!isset($clientes)) {
             return response()->json([
-                'status' => true,
-                'message' => 'Senha redefinida.'
+                'status' => false,
+                'message' => 'Não foi possivel alterar a senha'
             ]);
         }
 
+
+        $clientes->senha = ($clientes->cpf);
+        $clientes->update();
         return response()->json([
-            'status' => false,
-            'message' => 'Não foi possivel alterar a senha'
+            'status' => true,
+            'message' => 'Senha redefinida.'
         ]);
+       
     }
 
 }
