@@ -59,9 +59,9 @@ class AgendaController extends Controller
     }
     public function atualizarAgenda(Request $request)
     {
-        $agendaProfissional = Agenda::where('data_hora', '=', $request->data_hora)->where('profissional_id', '=', $request->profissional_id)->get();
+        $agenda = Agenda::where('data_hora', '=', $request->data_hora)->where('profissional_id', '=', $request->profissional_id)->get();
 
-        if (count($agendaProfissional) > 0) {
+        if (count($agenda) > 0) {
             return response()->json([
                 "status" => false,
                 "message" => "Horario ja cadastrado",
@@ -102,7 +102,7 @@ class AgendaController extends Controller
 
         }
     }
-    
+
     public function deletarAgenda($id)
     {
         $agenda = Agenda::find($id);
@@ -148,24 +148,24 @@ class AgendaController extends Controller
     public function criarHorarioProfissional(AgendaFormRequest $request)
     {
 
-        $agendaProfissional = Agenda::where('data_hora', '=', $request->data_hora)->where('profissional_id', '=', $request->profissional_id)->get();
+        $agenda = Agenda::where('data_hora', '=', $request->data_hora)->where('profissional_id', '=', $request->profissional_id)->get();
 
-        if (count($agendaProfissional) > 0) {
+        if (count($agenda) > 0) {
             return response()->json([
                 "success" => false,
                 "message" => "Horario ja cadastrado",
-                "data" => $agendaProfissional
+                "data" => $agenda
             ], 200);    
         } else {
 
-            $agendaProfissional = Agenda::create([
+            $agenda = Agenda::create([
                 'profissional_id' => $request->profissional_id,
                 'data_hora' => $request->data_hora
             ]);
             return response()->json([
                 "status" => true,
                 "message" => "Agendado com sucesso",
-                "data" => $agendaProfissional
+                "data" => $agenda
             ], 200);
         }
     }
