@@ -57,16 +57,24 @@ class AgendaController extends Controller
             'message' => 'Não há resultados para a pesquisa'
         ]);
     }
-
     public function atualizarAgenda(Request $request)
     {
-        $agenda = Agenda::find($request->id);
+        $agendaProfissional = Agenda::where('data_hora', '=', $request->data_hora)->where('profissional_id', '=', $request->profissional_id)->get();
 
-        if (!isset($agenda)) {
+        if (count($agendaProfissional) > 0) {
             return response()->json([
-                'status' => false,
-                'message' => 'Não há resultados para a Agenda'
-            ]);
+                "status" => false,
+                "message" => "Horario ja cadastrado",
+                "data" => $agendaProfissional
+            ], 200);    
+        } else{
+            $agenda = Agenda::find($request->id);
+
+            if (!isset($agenda)) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Não há resultados para a Agenda'
+                ]);
         }
         if (isset($request->profissional_id)) {
             $agenda->profissional_id = $request->profissional_id;
@@ -91,8 +99,10 @@ class AgendaController extends Controller
             'status' => true,
             'message' => 'Agenda atualizada com sucesso'
         ]);
-    }
 
+        }
+    }
+    
     public function deletarAgenda($id)
     {
         $agenda = Agenda::find($id);
