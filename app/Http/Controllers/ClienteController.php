@@ -224,7 +224,7 @@ public function excluirCliente($id){
 
 public function recuperarSenha(Request $request)
     {
-        $clientes = Cliente::where('email', '=',$request->email)->first();
+        $clientes = Cliente::where('email',$request->email)->first();
 
         if (!isset($clientes)) {
             return response()->json([
@@ -232,8 +232,6 @@ public function recuperarSenha(Request $request)
                 'message' => 'Não foi possivel alterar a senha'
             ]);
         }
-
-
         $clientes->senha = ($clientes->cpf);
         $clientes->update();
         return response()->json([
