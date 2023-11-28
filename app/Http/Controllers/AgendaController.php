@@ -33,7 +33,7 @@ class AgendaController extends Controller
         if (count($agenda) > 0) {
             return response()->json([
                 'status' => true,
-                'message' => $agenda
+                'data' => $agenda
             ]);
         }
         return response()->json([
@@ -65,7 +65,7 @@ class AgendaController extends Controller
             return response()->json([
                 "status" => false,
                 "message" => "Horario ja cadastrado",
-                "data" => $agendaProfissional
+                "data" => $agenda
             ], 200);    
         } else{
             $agenda = Agenda::find($request->id);
@@ -152,8 +152,8 @@ class AgendaController extends Controller
 
         if (count($agenda) > 0) {
             return response()->json([
-                "success" => false,
-                "message" => "Horario ja cadastrado",
+                "status" => false,
+                "message" => "Horario já cadastrado",
                 "data" => $agenda
             ], 200);    
         } else {

@@ -51,7 +51,7 @@ Route::put('cliente/atualizar',[ClienteController::class, 'atualizarClientes']);
 
 Route::delete('excluir/{id}',[ClienteController::class, 'excluirCliente']);
 
-Route::put('recuperarSenha', [ClienteController::class, 'recuperarSenha']);
+Route::post('recuperarSenhas', [ClienteController::class, 'recuperarSenha']);
 
 // Profissionals
 Route::post('cadastro', [ProfissionalController::class, 'store']);
@@ -70,10 +70,9 @@ Route::put('update',[ProfissionalController::class, 'atualizarProfissional']);
 
 Route::delete('deletar/{id}', [ProfissionalController::class, 'deletarProfissional']);
 
-Route::put('senha', [ProfissionalController::class, 'redefinirSenha']);
+Route::post('senha', [ProfissionalController::class, 'redefinirSenha']);
 
 //* Agendamento
-Route::post('registroAgenda', [AgendaController::class, 'agenda']);
 
 Route::put('updateAgenda', [AgendaController::class, 'atualizarAgenda']);
 

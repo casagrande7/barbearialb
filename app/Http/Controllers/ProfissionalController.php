@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfissionalFormRequest;
 use App\Http\Requests\UpdateProfissionalFormRequest;
+use App\Models\Agenda;
 use App\Models\Profissional;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -216,6 +217,13 @@ public function deletarProfissional($id){
             'message' => "Profissional não encontrado"
         ]);
     }
+    $profissional_agendamento = Agenda::where('profissional_id', $id)->get();
+    if(count($profissional_agendamento) > 0){
+        return response()->json([
+        'status' => false,
+        'message' => "Não foi possível excluir, pois o profissional possui agendamentos registrados."
+        ]);
+    }
 
     $profissional->delete();
     return response() -> json([
@@ -226,21 +234,24 @@ public function deletarProfissional($id){
 
 public function redefinirSenha(Request $request)
     {
-        $profissional = Profissional::where('email', $request->email)->first();
-
-        if (isset($profissional)) {
-            $profissional->senha = ($profissional->cpf);
-            $profissional->update();
+        $profissional = Profissional::where('email', 'ILIKE', $request->email)->first();
+        if ($profissional) {
+            $novaSenha = $profissional->cpf;
+            $profissional->update([
+                'senha' => Hash::make($novaSenha),
+                'updated_at' => now()
+            ]);
             return response()->json([
                 'status' => true,
-                'message' => 'Senha redefinida.'
+                'message' => 'Senha redefinida',
+                'nova_senha' => Hash::make($novaSenha)
+            ]);
+        } else {
+            return response()->json([
+                'status' => false,
+                'message' => 'Cliente não encontrado'
             ]);
         }
-
-        return response()->json([
-            'status' => false,
-            'message' => 'Não foi possivel alterar a senha'
-        ]);
     }
 
 }
