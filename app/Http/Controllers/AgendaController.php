@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AgendaFormRequest;
+use App\Http\Requests\UpdateAgendaFormRequest;
 use App\Models\Agenda;
 use Illuminate\Http\Request;
 
@@ -57,7 +58,7 @@ class AgendaController extends Controller
             'message' => 'Não há resultados para a pesquisa'
         ]);
     }
-    public function atualizarAgenda(Request $request)
+    public function atualizarAgenda(UpdateAgendaFormRequest $request)
     {
         $agenda = Agenda::where('data_hora', '=', $request->data_hora)->where('profissional_id', '=', $request->profissional_id)->get();
 
