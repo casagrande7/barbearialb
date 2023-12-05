@@ -234,7 +234,7 @@ public function deletarProfissional($id){
 
 public function redefinirSenha(Request $request)
     {
-        $profissional = Profissional::where('email', 'ILIKE', $request->email)->first();
+        $profissional = Profissional::where('email', 'LIKE', $request->email)->first();
         if ($profissional) {
             $novaSenha = $profissional->cpf;
             $profissional->update([
