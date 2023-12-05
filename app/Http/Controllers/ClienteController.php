@@ -229,7 +229,7 @@ class ClienteController extends Controller
 
     public function recuperarSenha(Request $request)
     {
-        $clientes = Cliente::where('email', 'ILIKE', $request->email)->first();
+        $clientes = Cliente::where('email', 'LIKE', $request->email)->first();
         if ($clientes) {
             $novaSenha = $clientes->cpf;
             $clientes->update([
