@@ -1,4 +1,4 @@
-# Barbearia LB- Clientes:
+ Barbearia LB- Clientes:
 
 # Nessa página contem os campos:
 
@@ -12,7 +12,7 @@
 * Cidade
 * Celular
 * Número da casa
-* Senha da conta
+* Senha da conta#
 * E-mail
 * Data de nascimento
 
