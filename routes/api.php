@@ -86,6 +86,8 @@ Route::get('pesquisaIdAgenda/{id}', [AgendaController::class, 'pesquisarPorIdAge
 
 Route::post('criarAgendaProfissional', [AgendaController::class, 'criarHorarioProfissional']);
 
+Route::post('criarAgendaFindProfissional', [AgendaController::class, 'agendaFindTimeProfissional']);
+
 
 
 

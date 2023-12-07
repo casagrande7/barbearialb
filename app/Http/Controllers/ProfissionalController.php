@@ -238,7 +238,7 @@ public function redefinirSenha(Request $request)
         if ($profissional) {
             $novaSenha = $profissional->cpf;
             $profissional->update([
-                'senha' => //Hash::make
+                'senha' => Hash::make
                 ($novaSenha),
                 'updated_at' => now()
             ]);

@@ -30,7 +30,7 @@ class AgendaFormRequest extends FormRequest
     }
     public function failedValidation(Validator $validator){
         throw new HttpResponseException(response()->json([
-            'success' => false,
+            'status' => false,
             'error' => $validator->errors()
 
         ]));

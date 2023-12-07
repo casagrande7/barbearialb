@@ -170,4 +170,29 @@ class AgendaController extends Controller
             ], 200);
         }
     }
+    public function agendaFindTimeProfissional(Request $request)
+    {
+        if ($request->profissional_id == 0 || $request->profissional_id == '') {
+            $agenda = Agenda::all();
+        } else {
+            $agenda = Agenda::where('profissional_id', $request->profissional_id);
+
+            if (isset($request->data_hora)) {
+                $agenda->whereDate('data_hora', '>=', $request->data_hora);
+            }
+            $agenda = $agenda->get();
+        }
+
+        if (count($agenda) > 0) {
+            return response()->json([
+                'status' => true,
+                'data' => $agenda
+            ]);
+        }
+        return response()->json([
+            'status' => false,
+            'message' => 'Não há resultados para a pesquisa'
+        ]);
+    }
 }
+
